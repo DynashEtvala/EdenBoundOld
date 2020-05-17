@@ -1,20 +1,20 @@
 package com.dynashetvala.edenbound.init;
 
-import com.dynashetvala.edenbound.EdenBound;
+import com.dynashetvala.edenbound.Edenbound;
+import com.dynashetvala.edenbound.Edenbound.BlockTab;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
-@ObjectHolder(EdenBound.MOD_ID)
-@Mod.EventBusSubscriber(modid = EdenBound.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(Edenbound.MOD_ID)
+@Mod.EventBusSubscriber(modid = Edenbound.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BlockInit
 {
     public static final Block large_generic_object = null;
@@ -28,7 +28,7 @@ public class BlockInit
     @SubscribeEvent
     public static void registerBlockItems(final RegistryEvent.Register<Item> event)
     {
-        event.getRegistry().register(new BlockItem(large_generic_object, new Item.Properties().group(EdenBound.BlockTab.instance)).setRegistryName("large_generic_object"));
+        event.getRegistry().register(new BlockItem(large_generic_object, new Item.Properties().group(BlockTab.instance)).setRegistryName("large_generic_object"));
     }
 
 }

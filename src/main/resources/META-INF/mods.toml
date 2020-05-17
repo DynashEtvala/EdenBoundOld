@@ -10,7 +10,7 @@ modId="edenbound" #mandatory
 
 version="1.0" #mandatory
 
-displayName="Eden Bound" #mandatory
+displayName="Edenbound" #mandatory
 
 updateJSONURL="http://myurl.me" #optional
 

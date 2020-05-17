@@ -1,6 +1,6 @@
 {
-  "itemGroup.edenbounditems": "Eden Bound Items",
-  "itemGroup.edenboundblocks": "Eden Bound Blocks",
   "item.edenbound.perfectly_generic_object": "Perfectly Generic Object",
-  "block.edenbound.large_generic_object": "Large Generic Object"
+  "block.edenbound.large_generic_object": "Large Generic Object",
+  "itemGroup.edenbounditems": "Edenbound Items",
+  "itemGroup.edenboundblocks": "Edenbound Blocks"
 }
