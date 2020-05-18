@@ -1,6 +1,15 @@
 {
   "item.edenbound.perfectly_generic_object": "Perfectly Generic Object",
+  "item.edenbound.perfectly_generic_rod": "Perfectly Generic Rod",
+
+  "item.edenbound.perfectly_generic_sword": "Perfectly Generic Sword",
+  "item.edenbound.perfectly_generic_pickaxe": "Perfectly Generic Pickaxe",
+  "item.edenbound.perfectly_generic_shovel": "Perfectly Generic Shovel",
+  "item.edenbound.perfectly_generic_axe": "Perfectly Generic Axe",
+  "item.edenbound.perfectly_generic_hoe": "Perfectly Generic Hoe",
+
   "block.edenbound.large_generic_object": "Large Generic Object",
+
   "itemGroup.edenbounditems": "Edenbound Items",
   "itemGroup.edenboundblocks": "Edenbound Blocks"
 }
