@@ -18,17 +18,20 @@ import net.minecraftforge.registries.ObjectHolder;
 public class BlockInit
 {
     public static final Block large_generic_object = null;
+    public static final Block perfectly_generic_ore = null;
 
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event)
     {
         event.getRegistry().register(new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(0.5f, 5).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)).setRegistryName("large_generic_object"));
+        event.getRegistry().register(new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0f, 5).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)).setRegistryName("perfectly_generic_ore"));
     }
 
     @SubscribeEvent
     public static void registerBlockItems(final RegistryEvent.Register<Item> event)
     {
         event.getRegistry().register(new BlockItem(large_generic_object, new Item.Properties().group(BlockTab.instance)).setRegistryName("large_generic_object"));
+        event.getRegistry().register(new BlockItem(perfectly_generic_ore, new Item.Properties().group(BlockTab.instance)).setRegistryName("perfectly_generic_ore"));
     }
 
 }

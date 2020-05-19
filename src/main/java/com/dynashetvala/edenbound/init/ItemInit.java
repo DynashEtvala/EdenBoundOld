@@ -23,12 +23,20 @@ public class ItemInit
     public static final Item perfectly_generic_rod = null;
 
     //Tools
-    //Perfectly Generic Tools
+    //Perfectly Generic
         public static final Item perfectly_generic_sword = null;
         public static final Item perfectly_generic_pickaxe = null;
         public static final Item perfectly_generic_shovel = null;
         public static final Item perfectly_generic_axe = null;
         public static final Item perfectly_generic_hoe = null;
+    //Perfectly Generic
+
+    //Armor
+    //Perfectly Generic
+        public static final Item perfectly_generic_helmet = null;
+        public static final Item perfectly_generic_chestplate = null;
+        public static final Item perfectly_generic_leggings = null;
+        public static final Item perfectly_generic_boots = null;
     //Perfectly Generic Tools
 
     @SubscribeEvent
@@ -46,6 +54,8 @@ public class ItemInit
             event.getRegistry().register(new AxeItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, 0, new Item.Properties().group(ItemTab.instance)).setRegistryName("perfectly_generic_axe"));
             event.getRegistry().register(new HoeItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, new Item.Properties().group(ItemTab.instance)).setRegistryName("perfectly_generic_hoe"));
         }//Perfectly Generic Tools
+
+        //Armor
     }
 
     public enum EdenboundItemTier implements IItemTier
