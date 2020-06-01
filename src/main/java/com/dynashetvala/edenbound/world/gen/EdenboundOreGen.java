@@ -17,8 +17,8 @@ public class EdenboundOreGen
     {
         for (Biome biome : ForgeRegistries.BIOMES)
         {
-            ConfiguredPlacement customConfig = Placement.COUNT_RANGE.configure(new CountRangeConfig(50, 5, 5, 100));
-            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.large_generic_object.getDefaultState(), 4)).withPlacement(customConfig));
+            ConfiguredPlacement customConfig = Placement.COUNT_RANGE.configure(new CountRangeConfig(1, 5, 5, 64));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.perfectly_generic_ore.getDefaultState(), 2)).withPlacement(customConfig));
         }
     }
 }

@@ -18,6 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod("edenbound")
+@Mod.EventBusSubscriber(modid = Edenbound.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Edenbound
 {
     private static final Logger LOGGER = LogManager.getLogger();
