@@ -3,6 +3,7 @@ package com.dynashetvala.edenbound.init;
 import com.dynashetvala.edenbound.Edenbound;
 import com.dynashetvala.edenbound.Edenbound.ItemTab;
 import com.dynashetvala.edenbound.Edenbound.ArmorTab;
+import com.dynashetvala.edenbound.Edenbound.ToolTab;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
@@ -11,63 +12,37 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.swing.*;
 import java.util.function.Supplier;
 
-@Mod.EventBusSubscriber(modid = Edenbound.MOD_ID, bus = Bus.MOD)
-@ObjectHolder(Edenbound.MOD_ID)
 public class ItemInit
 {
+    public  static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Edenbound.MOD_ID);
+
     //Materials
-    public static final Item perfectly_generic_object = null;
-    public static final Item perfectly_generic_rod = null;
+    public static final RegistryObject<Item> PERFECTLY_GENERIC_OBJECT = ITEMS.register("perfectly_generic_object", () -> new Item(new Item.Properties().group(ItemTab.instance)));
+    public static final RegistryObject<Item> PERFECTLY_GENERIC_ROD = ITEMS.register("perfectly_generic_rod", () -> new Item(new Item.Properties().group(ItemTab.instance)));
 
     //Perfectly Generic
     //Tools
-        public static final Item perfectly_generic_sword = null;
-        public static final Item perfectly_generic_pickaxe = null;
-        public static final Item perfectly_generic_shovel = null;
-        public static final Item perfectly_generic_axe = null;
-        public static final Item perfectly_generic_hoe = null;
-    //Armor
-        public static final Item perfectly_generic_helmet = null;
-        public static final Item perfectly_generic_chestplate = null;
-        public static final Item perfectly_generic_leggings = null;
-        public static final Item perfectly_generic_boots = null;
-    //Perfectly Generic
-
-    @SubscribeEvent
-    public static void registerItems(final RegistryEvent.Register<Item> event)
-    {
-        //Materials
-        event.getRegistry().register(new Item(new Item.Properties().group(ItemTab.instance)).setRegistryName("perfectly_generic_object"));
-        event.getRegistry().register(new Item(new Item.Properties().group(ItemTab.instance)).setRegistryName("perfectly_generic_rod"));
-
-
-        {//Perfectly Generic
-            //Tools
-            event.getRegistry().register(new SwordItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, 0, new Item.Properties().group(ItemTab.instance)).setRegistryName("perfectly_generic_sword"));
-            event.getRegistry().register(new PickaxeItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, 0, new Item.Properties().group(ItemTab.instance)).setRegistryName("perfectly_generic_pickaxe"));
-            event.getRegistry().register(new ShovelItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, 0, new Item.Properties().group(ItemTab.instance)).setRegistryName("perfectly_generic_shovel"));
-            event.getRegistry().register(new AxeItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, 0, new Item.Properties().group(ItemTab.instance)).setRegistryName("perfectly_generic_axe"));
-            event.getRegistry().register(new HoeItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, new Item.Properties().group(ItemTab.instance)).setRegistryName("perfectly_generic_hoe"));
-            //Armor
-            event.getRegistry().register(new ArmorItem(EdenboundArmorMaterial.PERFECTLY_GENERIC, EquipmentSlotType.HEAD, new Item.Properties().group(ArmorTab.instance)).setRegistryName("perfectly_generic_helmet"));
-            event.getRegistry().register(new ArmorItem(EdenboundArmorMaterial.PERFECTLY_GENERIC, EquipmentSlotType.CHEST, new Item.Properties().group(ArmorTab.instance)).setRegistryName("perfectly_generic_chestplate"));
-            event.getRegistry().register(new ArmorItem(EdenboundArmorMaterial.PERFECTLY_GENERIC, EquipmentSlotType.LEGS, new Item.Properties().group(ArmorTab.instance)).setRegistryName("perfectly_generic_leggings"));
-            event.getRegistry().register(new ArmorItem(EdenboundArmorMaterial.PERFECTLY_GENERIC, EquipmentSlotType.FEET, new Item.Properties().group(ArmorTab.instance)).setRegistryName("perfectly_generic_boots"));
-        }//Perfectly Generic
-    }
+        public static final RegistryObject<Item> PERFECTLY_GENERIC_SWORD = ITEMS.register("perfectly_generic_sword", () -> new SwordItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, 0, new Item.Properties().group(ToolTab.instance)));
+        public static final RegistryObject<Item> PERFECTLY_GENERIC_PICKAXE = ITEMS.register("perfectly_generic_pickaxe", () -> new PickaxeItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, 0, new Item.Properties().group(ToolTab.instance)));
+        public static final RegistryObject<Item> PERFECTLY_GENERIC_SHOVEL = ITEMS.register("perfectly_generic_shovel", () -> new ShovelItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, 0, new Item.Properties().group(ToolTab.instance)));
+        public static final RegistryObject<Item> PERFECTLY_GENERIC_AXE = ITEMS.register("perfectly_generic_axe", () -> new AxeItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, 0, new Item.Properties().group(ToolTab.instance)));
+        public static final RegistryObject<Item> PERFECTLY_GENERIC_HOE = ITEMS.register("perfectly_generic_hoe", () -> new HoeItem(EdenboundItemTier.PERFECTLY_GENERIC, 0, new Item.Properties().group(ToolTab.instance)));
+        //Armor
+        public static final RegistryObject<Item> PERFECTLY_GENERIC_HELMET = ITEMS.register("perfectly_generic_helmet", () -> new ArmorItem(EdenboundArmorMaterial.PERFECTLY_GENERIC, EquipmentSlotType.HEAD, new Item.Properties().group(ArmorTab.instance)));
+        public static final RegistryObject<Item> PERFECTLY_GENERIC_CHESTPLATE = ITEMS.register("perfectly_generic_chestplate", () -> new ArmorItem(EdenboundArmorMaterial.PERFECTLY_GENERIC, EquipmentSlotType.CHEST, new Item.Properties().group(ArmorTab.instance)));
+        public static final RegistryObject<Item> PERFECTLY_GENERIC_LEGGINGS = ITEMS.register("perfectly_generic_leggings", () -> new ArmorItem(EdenboundArmorMaterial.PERFECTLY_GENERIC, EquipmentSlotType.LEGS, new Item.Properties().group(ArmorTab.instance)));
+        public static final RegistryObject<Item> PERFECTLY_GENERIC_BOOTS = ITEMS.register("perfectly_generic_boots", () -> new ArmorItem(EdenboundArmorMaterial.PERFECTLY_GENERIC, EquipmentSlotType.FEET, new Item.Properties().group(ArmorTab.instance)));
+        //Perfectly Generic
 
     public enum EdenboundItemTier implements IItemTier
     {
-        PERFECTLY_GENERIC(1, 500, 5, 4.5f, 255, () -> {return Ingredient.fromItems(ItemInit.perfectly_generic_object);});
+        PERFECTLY_GENERIC(1, 500, 5, 4.5f, 255, () -> {return Ingredient.fromItems(ItemInit.PERFECTLY_GENERIC_OBJECT.get());});
 
         private final int harvestLevel;
         private final int maxUses;
@@ -125,7 +100,7 @@ public class ItemInit
 
     public enum EdenboundArmorMaterial implements IArmorMaterial
     {
-        PERFECTLY_GENERIC(Edenbound.MOD_ID + ":perfectly_generic", 50, new int[] {4,10,8,4}, 255, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 5f, () -> {return Ingredient.fromItems(ItemInit.perfectly_generic_object);});
+        PERFECTLY_GENERIC(Edenbound.MOD_ID + ":perfectly_generic", 50, new int[] {4,10,8,4}, 255, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 5f, () -> {return Ingredient.fromItems(ItemInit.PERFECTLY_GENERIC_OBJECT.get());});
 
         private static final  int[] MAX_DAMAGE_ARRAY = new int[] {11,16,15,13};
         private final String name;

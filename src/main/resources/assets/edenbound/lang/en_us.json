@@ -13,7 +13,10 @@
   "item.edenbound.perfectly_generic_boots": "Perfectly Generic Boots",
 
   "block.edenbound.large_generic_object": "Large Generic Object",
+  "block.edenbound.perfectly_generic_ore": "Large Generic Object",
 
+  "itemGroup.edenboundarmor": "Edenbound Armor",
+  "itemGroup.edenboundblocks": "Edenbound Blocks",
   "itemGroup.edenbounditems": "Edenbound Items",
-  "itemGroup.edenboundblocks": "Edenbound Blocks"
+  "itemGroup.edenboundtools": "Edenbound Tools"
 }
