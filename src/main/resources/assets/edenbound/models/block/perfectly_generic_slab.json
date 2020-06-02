@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "edenbound:blocks/large_generic_object",
+        "top": "edenbound:blocks/large_generic_object",
+        "side": "edenbound:blocks/large_generic_object"
+    }
+}
