@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ii",
+    "ii"
+  ],
+  "key": {
+    "i": {
+      "item": "edenbound:perfectly_generic_object"
+    }
+  },
+  "result": {
+    "item": "edenbound:large_generic_object"
+  }
+}
