@@ -125,9 +125,9 @@ public class ItemInit
 
     public enum EdenboundArmorMaterial implements IArmorMaterial
     {
-        PERFECTLY_GENERIC(Edenbound.MOD_ID + ":perfectly_generic", 5, new int[] {7,9,11,7}, 255, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 6.9f, () -> {return Ingredient.fromItems(ItemInit.perfectly_generic_object);});
+        PERFECTLY_GENERIC(Edenbound.MOD_ID + ":perfectly_generic", 50, new int[] {4,10,8,4}, 255, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 5f, () -> {return Ingredient.fromItems(ItemInit.perfectly_generic_object);});
 
-        private static final  int[] MAX_DAMAGE_ARRAY = new int[] {16,16,16,16};
+        private static final  int[] MAX_DAMAGE_ARRAY = new int[] {11,16,15,13};
         private final String name;
         private final int maxDamageFactor;
         private final int [] damageReductionAmountArray;
