@@ -1,6 +1,8 @@
 package com.dynashetvala.edenbound;
 
 import com.dynashetvala.edenbound.init.BlockInit;
+import com.dynashetvala.edenbound.init.EdenboundContainerTypes;
+import com.dynashetvala.edenbound.init.EdenboundTileEntityTypes;
 import com.dynashetvala.edenbound.init.ItemInit;
 import com.dynashetvala.edenbound.world.gen.EdenboundOreGen;
 import net.minecraft.item.BlockItem;
@@ -38,6 +40,8 @@ public class Edenbound
 
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
+        EdenboundTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+        EdenboundContainerTypes.CONTAINER_TYPES.register(modEventBus);
 
         instance = this;
 
