@@ -2,7 +2,6 @@ package com.dynashetvala.edenbound.init;
 
 import com.dynashetvala.edenbound.Edenbound;
 import com.dynashetvala.edenbound.Edenbound.BlockTab;
-import com.dynashetvala.edenbound.objects.blocks.GenericChestBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
@@ -28,9 +27,5 @@ public class BlockInit
     public static final RegistryObject<Block> LARGE_GENERIC_OBJECT = BLOCKS.register("large_generic_object", () -> new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(0.5f, 5).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> PERFECTLY_GENERIC_STAIRS = BLOCKS.register("perfectly_generic_stairs", () -> new StairsBlock(() -> LARGE_GENERIC_OBJECT.get().getDefaultState(), Block.Properties.create(Material.EARTH)));
     public static final RegistryObject<Block> PERFECTLY_GENERIC_SLAB = BLOCKS.register("perfectly_generic_slab", () -> new SlabBlock(Block.Properties.create(Material.EARTH)));
-
-    public static final RegistryObject<Block> PERFECTLY_GENERIC_CHEST = BLOCKS.register("perfectly_generic_chest", () -> new GenericChestBlock(Block.Properties.from(LARGE_GENERIC_OBJECT.get())));
     //Perfectly Generic
-
-
 }
