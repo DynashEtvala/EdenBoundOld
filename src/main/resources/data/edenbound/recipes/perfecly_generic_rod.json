@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "i",
+    "i"
+  ],
+  "key": {
+    "i": {
+      "item": "edenbound:perfectly_generic_object"
+    }
+  },
+  "result": {
+    "item": "edenbound:perfectly_generic_rod",
+    "count": 2
+  }
+}

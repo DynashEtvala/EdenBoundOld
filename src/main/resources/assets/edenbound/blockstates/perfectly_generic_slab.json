@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "edenbound:block/perfectly_generic_slab" },
+    "type=top": { "model": "edenbound:block/perfectly_generic_slab_top" },
+    "type=double": { "model": "edenbound:block/large_generic_object" }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "edenbound:items/perfectly_generic_shovel"
+  }
+}
